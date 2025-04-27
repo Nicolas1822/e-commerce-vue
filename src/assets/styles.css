@@ -1,0 +1,14 @@
+body.login-background {
+  background-color: #232033;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+body {
+  font-family: 'roboto', sans-serif;
+  background-color: #09090b;
+  color: #ffffff; /* Texto blanco */
+}
