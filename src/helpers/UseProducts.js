@@ -4,7 +4,7 @@ import { API_URL } from "@/env/url_routes";
 export const getProducts = async () => {
   try {
     const response = await axios.get(
-      API_URL.prod.products.getProducts,
+      API_URL.dev.products.getProducts,
     );
     return response.data;
   } catch (error) {
@@ -15,7 +15,7 @@ export const getProducts = async () => {
 export const getProductsById = async (id) => {
   try {
     const response = await axios.get(
-      API_URL.prod.products.getProductsById + id,
+      API_URL.dev.products.getProductsById + id,
     );
     return response;
   } catch (error) {
@@ -26,7 +26,7 @@ export const getProductsById = async (id) => {
 export const createProduct = async (data) => {
   try {
     const response = await axios.post(
-      API_URL.prod.products.createProduct,
+      API_URL.dev.products.createProduct,
       data,
       {
         headers: {
@@ -43,7 +43,7 @@ export const createProduct = async (data) => {
 export const modifyProduct = async (id, data) => {
   try {
     const response = await axios.patch(
-      API_URL.prod.products.editProduct + id,
+      API_URL.dev.products.editProduct + id,
       data,
       {
         headers: {
@@ -61,7 +61,7 @@ export const modifyProduct = async (id, data) => {
 export const deleteProduct = async (id) => {
   try {
     const response = await axios.delete(
-      API_URL.prod.products.deleteProduct + id,
+      API_URL.dev.products.deleteProduct + id,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`,

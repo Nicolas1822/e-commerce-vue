@@ -4,7 +4,7 @@ import { API_URL } from "@/env/url_routes";
 export const createOrder = async () => {
   try {
     const response = await axios.post(
-      API_URL.prod.orders.createOrder,
+      API_URL.dev.orders.createOrder,
       {},
       {
         headers: {
@@ -21,7 +21,7 @@ export const createOrder = async () => {
 export const addItemToOrder = async (orderId, productId, amount) => {
   try {
     const response = await axios.post(
-      API_URL.prod.orders.addItemToOrder,
+      API_URL.dev.orders.addItemToOrder,
       {
         orderId: orderId,
         productId: productId,
@@ -41,7 +41,7 @@ export const addItemToOrder = async (orderId, productId, amount) => {
 
 export const myOrders = async () => {
   try {
-    const response = await axios.get(API_URL.prod.orders.showMyOrders, {
+    const response = await axios.get(API_URL.dev.orders.showMyOrders, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("access_token")}`,
       },
@@ -54,7 +54,7 @@ export const myOrders = async () => {
 
 export const deleteOrder = async (orderId) => {
   try {
-    const response = await axios.delete(API_URL.prod.orders.deleteOrder + orderId, {
+    const response = await axios.delete(API_URL.dev.orders.deleteOrder + orderId, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("access_token")}`,
       },
