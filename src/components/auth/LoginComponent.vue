@@ -16,6 +16,8 @@
       <p>{{ errorMessage }}</p>
     </Form>
     <router-link to="/"><a>Create account</a></router-link>
+    <br />
+    <router-link to="/forgot-password"><a>Forget my password</a></router-link>
   </div>
 </template>
 
