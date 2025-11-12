@@ -4,7 +4,7 @@ import { API_URL } from "@/env/url_routes";
 export const useRegister = async (name, lastName, phone, email, password) => {
   try {
     const response = await axios.post(
-      API_URL.prod.register,
+      API_URL.dev.register,
       {
         name: name,
         lastName: lastName,

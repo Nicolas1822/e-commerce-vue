@@ -11,6 +11,8 @@ import EditCategoryView from '@/views/categories/EditCategoryView.vue'
 import CreateProductView from '@/views/products/CreateProductView.vue'
 import ManageProductsView from '@/views/products/ManageProductsView.vue'
 import EditProductView from '@/views/products/EditProductView.vue'
+import ForgotPasswordView from '@/views/auth/ForgotPasswordView.vue'
+import RecoveryPasswordView from '@/views/auth/RecoveryPasswordView.vue'
 
 const isAuthenticated = () => {
   const token = localStorage.getItem('access_token')
@@ -24,6 +26,30 @@ const router = createRouter({
       path: '/',
       name: 'register',
       component: RegisterView,
+      beforeEnter: (to, from, next) => {
+        if (isAuthenticated()) {
+          next({ name: 'dashboard' })
+        } else {
+          next()
+        }
+      },
+    },
+    {
+      path: '/forgot-password',
+      name: 'forgot-password',
+      component: ForgotPasswordView,
+      beforeEnter: (to, from, next) => {
+        if (isAuthenticated()) {
+          next({ name: 'dashboard' })
+        } else {
+          next()
+        }
+      },
+    },
+    {
+      path: '/recovery-password',
+      name: 'recovery-password',
+      component: RecoveryPasswordView,
       beforeEnter: (to, from, next) => {
         if (isAuthenticated()) {
           next({ name: 'dashboard' })

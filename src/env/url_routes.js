@@ -27,6 +27,8 @@ export const API_URL = {
   dev: {
     register: "http://localhost:3000/api/v1/customer/",
     login: "http://localhost:3000/api/v1/auth/login",
+    forgotPassword: "http://localhost:3000/api/v1/auth/recovery",
+    resetPassword: "http://localhost:3000/api/v1/auth/change-password",
     products: {
       getProducts: "http://localhost:3000/api/v1/products/",
       getProductsById: "http://localhost:3000/api/v1/products/product-id?id=",
