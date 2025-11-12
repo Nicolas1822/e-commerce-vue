@@ -1,35 +1,14 @@
-# login-vue
+# E-commerce con vue
 
-This template should help get you started developing with Vue 3 in Vite.
+Para correr el proyecto en local solo se necesita tener instalado docker.
 
-## Recommended IDE Setup
+## Ejecutar contenedor
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Ejecutar el siguiente comando a la raiz del proyecto.
 
 ```sh
-npm install
+docker compose up --build -d
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Abrir en el navegador luego de ejecutar.
+http://localhost:5173/
